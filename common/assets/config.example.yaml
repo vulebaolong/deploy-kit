@@ -1,0 +1,16 @@
+version: 1
+
+projects:
+    - name: your-project-name
+
+      docker:
+          image_name: your-image-name
+          image_tag: latest
+          docker_file: ./Dockerfile
+
+      server:
+          host: your-ec2-host
+          port: 22
+          user: ubuntu
+          key_path: ~/.ssh/key.pem
+          docker_compose_path: /home/ubuntu/deployments/your-project/docker-compose.yml
